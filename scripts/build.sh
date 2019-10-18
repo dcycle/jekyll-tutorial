@@ -7,6 +7,6 @@ mkdir -p "$DESTINATION_DIR"
 
 echo " => Building our site"
 docker run --rm \
-  --volume="$PWD/jekyll:/srv/jekyll" \
+  --volume="$PWD/jekyll:/srv/jekyll":rw \
   -it jekyll/jekyll:4 \
   jekyll build --trace
